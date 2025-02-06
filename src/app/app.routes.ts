@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { Ex01Component } from './ex01/ex01.component';
 import { Ex02Component } from './ex02/ex02.component';
 import { Ex03Component } from './ex03/ex03.component';
@@ -12,7 +11,7 @@ import { Ex09Component } from './ex09/ex09.component';
 import { Ex10Component } from './ex10/ex10.component';
 
 export const routes: Routes = [
-    { path: '', component: AppComponent},
+    { path: '', component: Ex01Component},
     { path: 'ex01', component: Ex01Component },
     { path: 'ex02', component: Ex02Component },
     { path: 'ex03', component: Ex03Component },
