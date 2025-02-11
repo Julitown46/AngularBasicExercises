@@ -1,15 +1,38 @@
-<p>ex09 works!</p>
+<div class="pricipal-section">
+  <h1>Exercice 9</h1>
+  <h2>*ngFor - Classes</h2>
 
-<!-- <h1>Exercice 9</h1>
-<h2>*ngFor - Classes</h2>
-<b>Employees:</b>
-<table class="table-bordered table-hover">
-  <tr>
-    <th>Name</th><th>Position</th><th>Salary</th>
-  </tr>
-  <tr *ngFor="let e of employees">
-    <td>{{ e.name }}</td>
-    <td>{{ e.position }}</td>
-    <td>{{ e.salary }}</td>
-  </tr>
-</table> -->
+  <label for="sortingCriteria">Sort by:</label>
+  <select name="sortingCriteria" [(ngModel)]="sortingCriteria" (change)="sortEmployees(sortingCriteria)" id="sortingCriteria">
+
+    <option value="" selected>Select a sorting criteria</option>
+    <option value="name">Name</option>
+    <option value="position">Position</option>
+    <option value="salary">Salary</option>
+    <option value="department">Department</option>
+  </select>
+
+<br>
+
+    <table>
+      <thead>
+        <caption>
+          Employees:
+        </caption>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Salary</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of employees">
+          <td>{{e.name}}</td>
+          <td>{{e.position}}</td>
+          <td>{{e.salary}}</td>
+          <td>{{e.department}}</td>
+          <hr>
+        </tr>
+      </tbody>
+    </table>
